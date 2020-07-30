@@ -1,7 +1,7 @@
 # WindowsPDFSplitter
 Simple PDF splitter 
 
-![Image WPS](https://github.com/TasakaSan/WindowsPDFSplitter/blob/master/wps.png)
+![Image WPS](https://github.com/TasakaSan/WindowsPDFSplitter/blob/master/WPS.png)
 
 ### Split
 A simple tool allowing to divide a PDF file into several files ... 
