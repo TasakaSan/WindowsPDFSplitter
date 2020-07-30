@@ -1,0 +1,64 @@
+﻿<Window x:Class="WindowsPdfSplitter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsPdfSplitter"
+        mc:Ignorable="d"
+        Title="Windows Pdf Splitter" Height="1024" Width="640" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen"
+        x:Name="WindowsPdfSplitter">
+    <Grid Background="#FFFDF7F2">
+        <!-- Header -->
+        <Rectangle HorizontalAlignment="Center" Height="170" Stroke="#FF7C669B" VerticalAlignment="Top" Width="640" StrokeThickness="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6DC3F4" Offset="0"/>
+                    <GradientStop Color="#FF28D48F" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!-- Software Name -->
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="50,31,0,0" VerticalAlignment="Top" Width="100" Source="/pdf.png"/>
+        <Label x:Name="SoftwwareName" Content="Windows PDF Splitter" HorizontalAlignment="Left" Margin="195,28,0,0" VerticalAlignment="Top" FontSize="32" Background="#00000000" Foreground="#FFF7F7F7" FontWeight="Bold"/>
+        <TextBlock x:Name="SoftwareVersion" HorizontalAlignment="Left" Margin="202,69,0,0" Text="Version 1.0.0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Foreground="#FFFDF7F2"/>
+
+        <!-- Select PDF -->
+        <TextBox x:Name="PDFSelectorPath" HorizontalAlignment="Left" Margin="50,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="50" Focusable="False" FontWeight="Bold"/>
+        <Button x:Name="PDFSelectorBtn" Content="Select file" HorizontalAlignment="Left" Margin="451,224,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="btn_OpenFile" FontWeight="Bold" Foreground="White" BorderBrush="#FF66C5EA" Background="#FF66C5EA">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" Opacity="0.15"  Color="#FF40B26F" ShadowDepth="5" Direction="315" />
+            </Button.Effect>
+        </Button>
+
+        <!-- Select Folder -->
+        <TextBox x:Name="PDFSavePath" HorizontalAlignment="Left" Margin="50,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" Height="50" Focusable="False" FontWeight="Bold"/>
+        <Button x:Name="PDFSavePathBtn" Content="Save location" HorizontalAlignment="Left" Margin="451,315,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="btn_SaveFile" FontWeight="Bold" Foreground="White" BorderBrush="#FF66C5EA" Background="#FF66C5EA">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" Opacity="0.15"  Color="#FF40B26F" ShadowDepth="5" Direction="315" />
+            </Button.Effect>
+        </Button>
+
+
+        <!-- Text Count -->
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="50,437,0,0" Text="File create after split : " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32"/>
+        <TextBlock x:Name="pdfCount" HorizontalAlignment="Left" Margin="500,437,0,0" Text="000" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32"/>
+
+        <!-- Button Split PDF -->
+        <Button x:Name="btn_Split_PDF" Content="Split PDF" HorizontalAlignment="Left" Margin="360,815,0,0" VerticalAlignment="Top" Height="80" Width="230" Click="btn_SplitPDF" FontWeight="Bold" Foreground="White" BorderBrush="#FF66C5EA" Background="#FF66C5EA" FontSize="24">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" Opacity="0.15"  Color="#FF40B26F" ShadowDepth="5" Direction="315" />
+            </Button.Effect>
+        </Button>
+
+        <!-- Button Reset Form -->
+        <Button x:Name="btn_Reset_Form" Content="Reset" HorizontalAlignment="Left" Margin="50,815,0,0" VerticalAlignment="Top" Height="80" Width="230" Click="btn_Reset" FontWeight="Bold" Foreground="White" BorderBrush="#FF66C5EA" Background="#FF66C5EA" FontSize="24">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="4" Opacity="0.15"  Color="#FF40B26F" ShadowDepth="5" Direction="315" />
+            </Button.Effect>
+        </Button>
+
+        <!-- Progressbar -->
+        <ProgressBar HorizontalAlignment="Center" Height="53" Margin="0,955,0,0" VerticalAlignment="Top" Width="640" x:Name="progressbarsplit" Foreground="#FF31D29C"/>
+    </Grid>
+</Window>
